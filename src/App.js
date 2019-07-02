@@ -13,12 +13,17 @@ class App extends Component {
     ]
   }
   render() {
+    const { query, mails } = this.state;
     return (
-      <MailListTemplate>
-        <Search />
-        <MailList />
+      <MailListTemplate search={(
+        <Search
+          query={query}
+        />
+      )}>
+        <MailList mails={mails}/>
       </MailListTemplate>
     );
   }
 }
+
 export default App;
