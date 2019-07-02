@@ -7,6 +7,9 @@ const MailListTemplate = ({search, children}) => {
       <div className="title">
         GeeMail
       </div>
+      <section className="search-wrapper">
+        { search }
+      </section>
       <section className="mails-wrapper">
         { children }
       </section>
