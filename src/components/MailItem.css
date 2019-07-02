@@ -1,0 +1,21 @@
+.mail-item {
+  padding: 1rem;
+  display: flex;
+  align-items: left;
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.mail-item:hover {
+  background: #e3fafc
+}
+
+.mail-item + .mail-item {
+  border-top: 1px solid #f1f3f5;
+}
+
+.todo-text {
+  flex: 1;
+  word-break: break-all;
+}
