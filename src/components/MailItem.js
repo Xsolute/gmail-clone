@@ -6,7 +6,14 @@ class MailItem extends Component {
     const { title, from, important, read, favorite, checked, id } = this.props;
     return (
       <div className="mail-item">
-        <div className="todo-text">
+        <div className={`checkbox ${checked && 'checked'}`}>
+          <input type="checkbox" id={id} name={id} value={checked} />
+          <label for={id}></label>
+        </div>
+        {
+          favorite && (<div className={`favorite ${favorite && 'starred'}`}>★</div>)
+        }
+        <div className="mail-title">
           {title}
         </div>
       </div>

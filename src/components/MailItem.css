@@ -2,6 +2,7 @@
   padding: 1rem;
   display: flex;
   align-items: left;
+  justify-content: center;
   cursor: pointer;
   transition: all 0.15s;
   user-select: none;
@@ -15,7 +16,52 @@
   border-top: 1px solid #f1f3f5;
 }
 
-.todo-text {
+.favorite {
+  margin-right: 1rem;
+  color: goldenrod;
+  font-weight: 600;
+}
+
+.starred {
+  font-weight: bolder;
+}
+
+.mail-title {
   flex: 1;
   word-break: break-all;
+}
+
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0.8);
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: brown;
+  border-color: brown;
+  color: #fff;
 }
